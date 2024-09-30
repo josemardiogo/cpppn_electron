@@ -1,0 +1,338 @@
+:root {
+    --first-color: #d4d4d4;
+    --bg-first: #fff;
+    --bg-secondary: #2A1572;
+    /* --bg-third: #C3E4FF; */
+    --bg-third: #2196f3;
+}
+
+.window {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard {
+    width: 0;
+    min-width: 0;
+    max-width: 250px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 1s;
+    overflow: hidden;
+    background-color: var(--bg-third);
+    border-right: 1px solid rgb(192, 192, 192);
+}
+
+.dashboard .fs-4 {
+    color: var(--bg-first);
+}
+
+.dashboard li {
+    color: var(--bg-first);
+}
+
+.d-show {
+    width: 250px;
+}
+
+@media screen and (max-width:1000px) {
+
+    #bg-black {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: block;
+        z-index: 1;
+        transition: display 1s;
+    }
+
+}
+
+.menu-items-container {
+    min-width: 100%;
+    height: 93vh;
+    overflow-y: auto;
+}
+
+.menu-items-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.chat-header-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: left 1s;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (min-width: 1000px) {
+    .chat-header-container {
+        left: 250px;
+        min-width: calc(100% - 250px);
+    }
+}
+
+.chat-header {
+    /* height: 7vh; */
+    height: 68px;
+    min-height: 68px;
+    max-height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    background-color: var(--bg-first);
+    /* box-shadow: 1px 1px 5px rgb(71, 71, 71); */
+}
+
+.menu {
+    width: 100%;
+    height: 7vh;
+    /* background-color: rgba(0, 0, 255, 0.158); */
+}
+
+.chat-container {
+    flex-grow: 1;
+    /* background-color: aquamarine; */
+}
+
+@media screen and (max-width:1000px) {
+
+    .chat-container {
+        position: unset;
+        flex-grow: unset;
+        width: 100%;
+    }
+
+}
+
+.show-content {
+    position: relative;
+    height: calc(100vh - (132px));
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+.message-box {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.munu-items {
+    min-width: 250px;
+    padding-bottom: 40px;
+}
+
+#btn-notification {
+    border: none;
+}
+
+#notification-toast .toast-body {
+    background-color: var(--bg-first);
+    max-height: 100Vh;
+    overflow-y: scroll;
+}
+
+#notification-toast .toast-body::-webkit-scrollbar-thumb {
+    width: 0;
+}
+
+#notification-toast .toast-body::-webkit-scrollbar {
+    width: 0;
+}
+
+.users-list {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.user-item {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.user-item:hover {
+    background-color: #00000009;
+}
+
+.active-chat {
+    background: #00000017;
+}
+
+/*  */
+/* ======================================== #no chat opend# ============================================= */
+/*  */
+.no-chat-opend {
+    background-color: var(--bg-first);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside-header {
+    /* height: 7vh; */
+    height: 68px;
+    min-width: 250px;
+    max-width: 250px;
+    border-bottom: 1px solid var(--first-color);
+    transition: 1s;
+    transform: rotate(0deg);
+}
+
+.picture {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-image: url('../img/logo.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.footer {
+    border-top: 1px solid var(--first-color);
+    /* height: 7vh; */
+    flex-grow: 1;
+    min-height: 68px;
+    max-height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/* ===========MENU===========*/
+
+.nav-menu {
+    position: relative;
+    height: calc(100vh - 68px);
+    overflow: auto;
+    min-width: 250px;
+    max-width: 250px;
+}
+.nav-menu::-webkit-scrollbar{
+    width: 5px;
+    background-color: #ccc;
+    padding: 10px;
+}
+.nav-menu::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #003366;
+}
+
+.ul-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.li-nav {
+    display: flex;
+    flex-direction: column;
+    transition: height .5s;
+    height: 44px;
+    overflow: hidden;
+    color: #000;
+}
+.i-menu{
+    font-weight: bold;
+}
+/* .li-nav.show {
+    height: auto;
+} */
+
+.li-nav-header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.li-nav-header.active {
+    background-color: rgba(0, 0, 0, 0.137) !important;
+}
+
+
+.li-nav > div > div{
+    display: flex;
+    gap: 15px;
+}
+.li-nav > div:hover, .li-li-nav:hover{
+    cursor: pointer;
+    /*background-color: rgba(0, 0, 0, 0.137) !important;*/
+    background-color: rgb(0, 51, 102,0.1);
+}
+
+.ul-nav .li-li-nav.active {
+    /*background-color: var(--bg-secondary) !important;*/
+    background-color: rgb(0, 51, 102,0.4);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul-ul-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.li-li-nav {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    color: #000;
+}
+
+.right-icon{
+    transition: 1s;
+    transform: rotate(0deg);
+}
+   
+.left-icon-volatr{
+    transform: rotate(-90deg);
+    transition: transform 1s;
+}
+
+.link{
+    font-weight: bold;
+    padding-left: 5px;
+    color: #2A1572;
+    font-size: 14pt;
+}
+
+.btn-menu{
+    transition: .5s;
+    background-color: var(--bg-third) !important;
+}
+
+@media (min-width: 1000px) {
+    .btn-menu {
+        display: none !important;
+    }
+}

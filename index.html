@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+    font-src 'self' https://cdn.jsdelivr.net;
+    img-src 'self' data: https://cdn.jsdelivr.net;
+    connect-src 'self' http://cpppn-api.mtapp.ao;
+  ">
+  <title>CPPPN</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="./styles.css" rel="stylesheet">
+  <link href="./src/bs/bootstrap-5.2.3.min.css" rel="stylesheet">
+  <link href="./src/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/skeleton.css">
+</head>
+
+<body>
+
+
+  <div class="" id="spinnerContainer">
+    <div class="spinner-custom"></div>
+  </div>
+  <div class="" id="overlay"></div>
+
+  <div class="body-content">
+  </div>
+
+
+  <div class="modal fade" id="ModalMessage" aria-hidden="true" aria-labelledby="ModalMessageLabelTitle" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <div class="btn-back rounded-circle" id="ModalMessageButtonBackTop" data-bs-dismiss="modal"
+            data-bs-toggle="modal" data-bs-target="#ModalStatus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+              class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+            </svg>
+          </div>
+
+          <div id="ModalMessageLabelTitle" class="container d-flex align-items-center justify-content-center">
+            <h5 class="modal-title">Title</h5>
+          </div>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+
+        <div class="modal-body" id="ModalMessageLabelInfo">
+          Message
+        </div>
+
+        <div class="modal-footer">
+
+          <button class="btn btn-secondary" id="ModalMessageButtonBack" data-bs-target="#ModalRegister"
+            data-bs-toggle="modal" data-bs-dismiss="modal">Editar</button>
+
+          <button class="btn btn-primary d-none" id="ModalMessageButtonOk" data-bs-dismiss="modal">OK</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modals">
+
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+  <!-- jquery -->
+  <script src="./src/jquery/jquery-3.6.0.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="./src/bs/bootstrap.bundle.min.js"></script>
+
+  <!-- My js -->
+  <script src="./src/js/script.js"></script>
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>

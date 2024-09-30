@@ -1,0 +1,44 @@
+.fundo {
+    background-image: url('../img/logo.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.login-container {
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+}
+
+#formLogin {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+form {
+    border: solid 1px rgb(192, 187, 187);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    min-width: 300px;
+    max-width: 480px;
+    padding-bottom: 30px;
+}
+
+.login-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#btn_login {
+    background-color: #2A1572;
+    border: none;
+}
